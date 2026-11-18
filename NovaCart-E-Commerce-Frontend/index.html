@@ -1,0 +1,883 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NovaCart | E-Commerce Store</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container nav-container">
+
+            <a href="#" class="logo">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Nova<span>Cart</span></span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#about" class="nav-link">About</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <!-- Search -->
+                <button class="icon-btn search-toggle" id="searchToggle" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <!-- Wishlist -->
+                <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="count-badge" id="wishlistCount">0</span>
+                </button>
+
+                <!-- Cart -->
+                <button class="icon-btn" id="cartBtn" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="count-badge" id="cartCount">0</span>
+                </button>
+
+                <!-- Mobile Menu -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar" id="searchBar">
+            <div class="container search-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search products..."
+                    autocomplete="off"
+                >
+                <button id="clearSearch" aria-label="Clear search">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+    <main>
+
+        <section class="hero" id="home">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+                    <span class="hero-tag">
+                        <i class="fa-solid fa-bolt"></i>
+                        New Collection 2026
+                    </span>
+
+                    <h1>
+                        Shop Smart.<br>
+                        <span>Live Better.</span>
+                    </h1>
+
+                    <p>
+                        Discover premium products, amazing deals and
+                        everything you need — all in one place.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn primary-btn">
+                            Shop Now
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="#categories" class="btn secondary-btn">
+                            Explore Categories
+                        </a>
+                    </div>
+
+                    <div class="hero-features">
+                        <div class="hero-feature">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <div>
+                                <strong>Free Delivery</strong>
+                                <small>On orders above ₹999</small>
+                            </div>
+                        </div>
+
+                        <div class="hero-feature">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div>
+                                <strong>Secure Payment</strong>
+                                <small>100% secure checkout</small>
+                            </div>
+                        </div>
+
+                        <div class="hero-feature">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <div>
+                                <strong>Easy Returns</strong>
+                                <small>7-day return policy</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="hero-circle"></div>
+
+                    <div class="floating-card floating-card-one">
+                        <i class="fa-solid fa-star"></i>
+                        <div>
+                            <strong>4.9/5</strong>
+                            <span>Customer Rating</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-card floating-card-two">
+                        <i class="fa-solid fa-tag"></i>
+                        <div>
+                            <strong>50% OFF</strong>
+                            <span>Special Offers</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-product">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+        <section class="categories-section" id="categories">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="section-label">SHOP BY CATEGORY</span>
+                        <h2>Find What You Love</h2>
+                    </div>
+
+                    <p>
+                        Explore our collection of carefully selected products.
+                    </p>
+                </div>
+
+                <div class="category-grid">
+
+                    <button class="category-card" data-category="Electronics">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-laptop"></i>
+                        </div>
+                        <h3>Electronics</h3>
+                        <span>Explore Collection</span>
+                    </button>
+
+                    <button class="category-card" data-category="Fashion">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <h3>Fashion</h3>
+                        <span>Explore Collection</span>
+                    </button>
+
+                    <button class="category-card" data-category="Beauty">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3>Beauty</h3>
+                        <span>Explore Collection</span>
+                    </button>
+
+                    <button class="category-card" data-category="Home">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <h3>Home & Living</h3>
+                        <span>Explore Collection</span>
+                    </button>
+
+                    <button class="category-card" data-category="Sports">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-dumbbell"></i>
+                        </div>
+                        <h3>Sports</h3>
+                        <span>Explore Collection</span>
+                    </button>
+
+                    <button class="category-card" data-category="Accessories">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-glasses"></i>
+                        </div>
+                        <h3>Accessories</h3>
+                        <span>Explore Collection</span>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PRODUCTS ================= -->
+        <section class="products-section" id="products">
+            <div class="container">
+
+                <div class="section-heading products-heading">
+                    <div>
+                        <span class="section-label">OUR COLLECTION</span>
+                        <h2>Featured Products</h2>
+                    </div>
+
+                    <p id="productResultText">
+                        Showing all products
+                    </p>
+                </div>
+
+                <!-- Filters -->
+                <div class="filter-bar">
+
+                    <div class="filter-left">
+
+                        <button class="filter-chip active" data-filter="All">
+                            All
+                        </button>
+
+                        <button class="filter-chip" data-filter="Electronics">
+                            Electronics
+                        </button>
+
+                        <button class="filter-chip" data-filter="Fashion">
+                            Fashion
+                        </button>
+
+                        <button class="filter-chip" data-filter="Beauty">
+                            Beauty
+                        </button>
+
+                        <button class="filter-chip" data-filter="Home">
+                            Home
+                        </button>
+
+                        <button class="filter-chip" data-filter="Sports">
+                            Sports
+                        </button>
+
+                    </div>
+
+                    <div class="sort-wrapper">
+                        <label for="sortSelect">Sort:</label>
+
+                        <select id="sortSelect">
+                            <option value="default">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Top Rated</option>
+                            <option value="name">Name: A-Z</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid" id="productGrid">
+                    <!-- Products will be generated by JavaScript -->
+                </div>
+
+                <!-- No Products -->
+                <div class="no-products" id="noProducts">
+                    <i class="fa-solid fa-box-open"></i>
+                    <h3>No products found</h3>
+                    <p>Try another search or category.</p>
+                    <button class="btn primary-btn" id="resetFilters">
+                        Reset Filters
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= PROMO BANNER ================= -->
+        <section class="promo-section">
+            <div class="container">
+
+                <div class="promo-banner">
+
+                    <div class="promo-content">
+                        <span>LIMITED TIME OFFER</span>
+
+                        <h2>
+                            Get up to <strong>50% OFF</strong>
+                            on selected products
+                        </h2>
+
+                        <p>
+                            Use coupon code <b>NOVA50</b> at checkout.
+                        </p>
+
+                        <button class="btn promo-btn" id="promoShopBtn">
+                            Shop Deals
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="promo-decoration">
+                        <div class="discount-circle">
+                            <strong>50%</strong>
+                            <span>OFF</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+        <section class="about-section" id="about">
+            <div class="container">
+
+                <div class="about-grid">
+
+                    <div class="about-content">
+                        <span class="section-label">WHY NOVACART?</span>
+
+                        <h2>
+                            Shopping Made
+                            <span>Simple & Better</span>
+                        </h2>
+
+                        <p>
+                            NovaCart brings quality products, secure payments
+                            and a smooth shopping experience together.
+                            Browse, compare and shop with confidence.
+                        </p>
+
+                        <div class="about-stats">
+                            <div>
+                                <strong>10K+</strong>
+                                <span>Products</span>
+                            </div>
+
+                            <div>
+                                <strong>50K+</strong>
+                                <span>Customers</span>
+                            </div>
+
+                            <div>
+                                <strong>4.9★</strong>
+                                <span>Rating</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-cards">
+
+                        <div class="about-card">
+                            <i class="fa-solid fa-cube"></i>
+                            <h3>Quality Products</h3>
+                            <p>Carefully selected products from trusted brands.</p>
+                        </div>
+
+                        <div class="about-card">
+                            <i class="fa-solid fa-lock"></i>
+                            <h3>Secure Shopping</h3>
+                            <p>Your shopping experience is designed with security in mind.</p>
+                        </div>
+
+                        <div class="about-card">
+                            <i class="fa-solid fa-headset"></i>
+                            <h3>24/7 Support</h3>
+                            <p>We're here whenever you need help.</p>
+                        </div>
+
+                        <div class="about-card">
+                            <i class="fa-solid fa-rotate"></i>
+                            <h3>Easy Returns</h3>
+                            <p>Simple and convenient return process.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Nova<span>Cart</span></span>
+                </a>
+
+                <p>
+                    Your one-stop destination for quality products,
+                    amazing deals and a better shopping experience.
+                </p>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <a href="#products">All Products</a>
+                <a href="#categories">Categories</a>
+                <a href="#products">New Arrivals</a>
+                <a href="#products">Best Sellers</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Help</h3>
+                <a href="#">Contact Us</a>
+                <a href="#">Shipping Info</a>
+                <a href="#">Returns</a>
+                <a href="#">FAQs</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe for latest offers and updates.</p>
+
+                <form class="newsletter-form" id="newsletterForm">
+                    <input
+                        type="email"
+                        placeholder="Your email address"
+                        required
+                    >
+
+                    <button type="submit" aria-label="Subscribe">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>
+                    © 2026 NovaCart. All rights reserved.
+                </p>
+
+                <div>
+                    <span>Privacy Policy</span>
+                    <span>Terms & Conditions</span>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- ================= PRODUCT MODAL ================= -->
+    <div class="modal-overlay" id="productModal">
+
+        <div class="modal product-modal">
+
+            <button class="modal-close" data-close="productModal" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="product-modal-content" id="productModalContent">
+                <!-- Generated by JavaScript -->
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CART DRAWER ================= -->
+    <div class="drawer-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer">
+
+        <div class="drawer-header">
+            <div>
+                <span class="section-label">YOUR BAG</span>
+                <h2>Shopping Cart</h2>
+            </div>
+
+            <button class="drawer-close" id="closeCart" aria-label="Close cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items generated by JS -->
+        </div>
+
+        <div class="cart-empty" id="cartEmpty">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h3>Your cart is empty</h3>
+            <p>Add some products to get started.</p>
+
+            <button class="btn primary-btn" id="startShopping">
+                Start Shopping
+            </button>
+        </div>
+
+        <div class="cart-summary" id="cartSummary">
+
+            <div class="coupon-box">
+                <input
+                    type="text"
+                    id="couponInput"
+                    placeholder="Coupon code"
+                >
+
+                <button id="applyCoupon">
+                    Apply
+                </button>
+            </div>
+
+            <p class="coupon-message" id="couponMessage"></p>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">₹0</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Discount</span>
+                <strong id="cartDiscount">- ₹0</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Delivery</span>
+                <strong id="cartDelivery">FREE</strong>
+            </div>
+
+            <div class="summary-total">
+                <span>Total</span>
+                <strong id="cartTotal">₹0</strong>
+            </div>
+
+            <button class="btn checkout-btn" id="checkoutBtn">
+                Proceed to Checkout
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= WISHLIST MODAL ================= -->
+    <div class="modal-overlay" id="wishlistModal">
+
+        <div class="modal wishlist-modal">
+
+            <button class="modal-close" data-close="wishlistModal" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-heading">
+                <span class="section-label">SAVED ITEMS</span>
+                <h2>My Wishlist <span id="wishlistModalCount">(0)</span></h2>
+            </div>
+
+            <div class="wishlist-grid" id="wishlistGrid">
+                <!-- Wishlist products generated by JS -->
+            </div>
+
+            <div class="wishlist-empty" id="wishlistEmpty">
+                <i class="fa-regular fa-heart"></i>
+                <h3>Your wishlist is empty</h3>
+                <p>Save your favorite products here.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CHECKOUT MODAL ================= -->
+    <div class="modal-overlay" id="checkoutModal">
+
+        <div class="modal checkout-modal">
+
+            <button class="modal-close" data-close="checkoutModal" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-heading">
+                <span class="section-label">SECURE CHECKOUT</span>
+                <h2>Complete Your Order</h2>
+            </div>
+
+            <form id="checkoutForm">
+
+                <div class="checkout-grid">
+
+                    <div class="checkout-form">
+
+                        <h3>Customer Details</h3>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    placeholder="Enter first name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    placeholder="Enter last name"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="example@email.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter phone number"
+                                pattern="[0-9]{10}"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Delivery Address</label>
+                            <textarea
+                                id="address"
+                                rows="3"
+                                placeholder="Enter your complete address"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input
+                                    type="text"
+                                    id="city"
+                                    placeholder="City"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pincode">PIN Code</label>
+                                <input
+                                    type="text"
+                                    id="pincode"
+                                    placeholder="6-digit PIN"
+                                    pattern="[0-9]{6}"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                        <h3 class="payment-title">Payment Method</h3>
+
+                        <div class="payment-options">
+
+                            <label class="payment-option active">
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="upi"
+                                    checked
+                                >
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                <span>UPI</span>
+                            </label>
+
+                            <label class="payment-option">
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="card"
+                                >
+                                <i class="fa-regular fa-credit-card"></i>
+                                <span>Card</span>
+                            </label>
+
+                            <label class="payment-option">
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="cod"
+                                >
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                                <span>Cash on Delivery</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="checkout-summary">
+
+                        <h3>Order Summary</h3>
+
+                        <div id="checkoutItems">
+                            <!-- Generated by JS -->
+                        </div>
+
+                        <div class="checkout-total">
+                            <div>
+                                <span>Subtotal</span>
+                                <strong id="checkoutSubtotal">₹0</strong>
+                            </div>
+
+                            <div>
+                                <span>Discount</span>
+                                <strong id="checkoutDiscount">- ₹0</strong>
+                            </div>
+
+                            <div>
+                                <span>Delivery</span>
+                                <strong>FREE</strong>
+                            </div>
+
+                            <div class="grand-total">
+                                <span>Total</span>
+                                <strong id="checkoutTotal">₹0</strong>
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn checkout-submit"
+                        >
+                            <i class="fa-solid fa-lock"></i>
+                            Place Order
+                        </button>
+
+                        <p class="secure-note">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Your information is secure
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ORDER SUCCESS MODAL ================= -->
+    <div class="modal-overlay" id="successModal">
+
+        <div class="modal success-modal">
+
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <span class="section-label">ORDER CONFIRMED</span>
+
+            <h2>Thank You for Your Order! 🎉</h2>
+
+            <p>
+                Your order has been placed successfully.
+                We'll send you the details shortly.
+            </p>
+
+            <div class="order-id">
+                <span>Order ID</span>
+                <strong id="orderId">NC-000000</strong>
+            </div>
+
+            <div class="success-actions">
+                <button class="btn primary-btn" id="continueShopping">
+                    Continue Shopping
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TOAST ================= -->
+    <div class="toast-container" id="toastContainer"></div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
